@@ -1,5 +1,0 @@
-(test
- (libraries fat-filesystem lwt lwt.unix cstruct alcotest
-   mirage-block-unix mirage-block mirage-block-combinators)
- (name test)
- (deps (glob_files *.dat)))

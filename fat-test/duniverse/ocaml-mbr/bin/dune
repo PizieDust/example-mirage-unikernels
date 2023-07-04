@@ -1,8 +1,0 @@
-(executables
- (names
-  mbr_inspect
-  read_partition
-  write_partition
-  resize_partition
-  create_mbr_disk)
- (libraries mbr cstruct cmdliner unix))

@@ -1,5 +1,0 @@
-(library
- (public_name mbr-format)
- (name mbr)
- (libraries cstruct)
- (modules mbr))

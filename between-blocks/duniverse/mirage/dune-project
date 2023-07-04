@@ -1,4 +1,0 @@
-(lang dune 2.9)
-(name mirage)
-(version v4.3.6)
-(cram enable)

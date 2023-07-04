@@ -1,4 +1,0 @@
-(executables
- (names main shell)
- (public_names fat shell)
- (libraries fat-filesystem mirage-block-unix cmdliner))
