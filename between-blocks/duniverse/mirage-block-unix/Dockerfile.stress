@@ -1,0 +1,14 @@
+FROM ocaml/opam2:alpine as build
+ENV OPAMJOBS 8
+RUN opam depext -u -i mirage-block-unix
+RUN opam install mirage-block-unix -y
+RUN opam install ounit diet -y
+WORKDIR /src
+COPY . /src
+RUN opam pin add mirage-block-unix /src -n
+USER 0
+RUN opam config --root /home/opam/.opam exec -- sh -c 'dune build lib_test/stress.exe'
+
+FROM alpine
+COPY --from=build /src/_build/default/lib_test/stress.exe /
+
